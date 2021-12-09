@@ -1,4 +1,5 @@
 mod day1;
+mod day2;
 
 use std::collections::HashMap;
 use std::env;
@@ -20,6 +21,8 @@ fn main() {
     let mut available_days = HashMap::<&str, fn() -> ()>::new();
     available_days.insert("1.1", day1::day1_1);
     available_days.insert("1.2", day1::day1_2);
+    available_days.insert("2.1", day2::day2_1);
+    available_days.insert("2.2", day2::day2_2);
 
     let day_to_run = available_days.get_key_value(&day as &str);
 
